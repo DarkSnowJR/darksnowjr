@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-label="Amirkian Kiani — Senior Software Engineer / Tech Lead">
+  <title>Amirkian Kiani — Senior Software Engineer / Tech Lead</title>
+
+  <defs>
+    <!-- Palindromic stops + reflected spread: the sweep never shows a seam at the loop point. -->
+    <linearGradient id="sweep" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#F472B6"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="0 0; 1040 0; 0 0" dur="14s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7C5CFF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F472B6" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="aurora" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#8FA0C8" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+
+    <clipPath id="card">
+      <rect width="1200" height="280" rx="22"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="280" fill="#080A14"/>
+
+    <!-- Drifting aurora field -->
+    <g filter="url(#aurora)" opacity="0.6">
+      <ellipse cx="200" cy="70" rx="240" ry="140" fill="#7C5CFF">
+        <animate attributeName="cx" values="200;380;200" dur="26s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="70;120;70" dur="19s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="640" cy="230" rx="280" ry="130" fill="#22D3EE" opacity="0.75">
+        <animate attributeName="cx" values="640;480;640" dur="31s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="1030" cy="90" rx="220" ry="120" fill="#F472B6" opacity="0.6">
+        <animate attributeName="cy" values="90;40;90" dur="23s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <rect width="1200" height="280" fill="url(#grid)"/>
+    <rect width="1200" height="280" fill="#080A14" opacity="0.42"/>
+
+    <!-- Status pill -->
+    <g transform="translate(72 54)">
+      <rect x="0" y="0" width="196" height="30" rx="15" fill="#0E1424" stroke="#8FA0C8" stroke-opacity="0.2"/>
+      <circle cx="18" cy="15" r="4" fill="#34D399">
+        <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="32" y="20" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+            font-size="12" letter-spacing="1.2" fill="#9FB0D0">TEHRAN · AVAILABLE</text>
+    </g>
+
+    <text x="72" y="158" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="58" font-weight="700" letter-spacing="2" fill="#F2F5FF">Amirkian Kiani</text>
+
+    <text x="74" y="200" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="25" font-weight="600" letter-spacing="0.6" fill="url(#sweep)">Senior Software Engineer / Tech Lead</text>
+
+    <text x="74" y="236" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+          font-size="13.5" letter-spacing="0.6" fill="#8293B5">Python · Go · Django · FastAPI · Odoo · PostgreSQL · Celery · Kubernetes</text>
+
+    <rect x="72" y="252" width="1056" height="1.5" fill="url(#hairline)"/>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="279" rx="22" fill="none" stroke="#8FA0C8" stroke-opacity="0.16"/>
+</svg>

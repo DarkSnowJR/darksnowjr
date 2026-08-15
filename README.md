@@ -122,8 +122,6 @@ and that's still where a lot of my product instinct comes from.
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=blizzardpy&bg_color=080A14&color=F2F5FF&line=7C5CFF&point=22D3EE&area=true&area_color=7C5CFF&hide_border=true&custom_title=Contribution%20activity" alt="Contribution activity" width="100%">
 
-<img src="https://streak-stats.demolab.com?user=blizzardpy&background=080A14&border=1E2540&stroke=1E2540&ring=7C5CFF&fire=F472B6&currStreakLabel=22D3EE&sideLabels=8293B5&dates=5A6785&currStreakNum=F2F5FF&sideNums=F2F5FF" alt="Contribution streak">
-
 </div>
 
 ---

@@ -22,11 +22,20 @@ release, and post-launch monitoring.
 
 ## What I build
 
-<div align="center">
 
-<img src="./assets/architecture.svg" alt="Request path: clients to REST APIs to domain services to PostgreSQL. Async path: Redis and Celery queues to workers to LLM and RAG to pgvector and Pinecone." width="100%">
-
-</div>
+```mermaid
+flowchart LR
+  C["Clients<br/>web · mobile · partners"] --> G["REST APIs<br/>Django/DRF · FastAPI · Gin"]
+  G --> S["Domain services<br/>Odoo ERP · booking · media"]
+  S --> DB[("PostgreSQL")]
+  S --> Q[("Redis · Celery<br/>queues")]
+  Q --> W["Workers<br/>FFmpeg · transcode · notifications"]
+  W --> DB
+  W --> AI["LLM + RAG<br/>summarization · Q&A · captions"]
+  AI --> V[("pgvector · Pinecone")]
+  G -.-> O["CI/CD · metrics · alerting"]
+  W -.-> O
+```
 
 Event-driven microservices, decoupled from the request path, with DDD and Clean Architecture
 where it earns its keep — and an RFC circulated before the code gets written.
@@ -121,6 +130,9 @@ and that's still where a lot of my product instinct comes from.
 <div align="center">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=blizzardpy&bg_color=080A14&color=F2F5FF&line=7C5CFF&point=22D3EE&area=true&area_color=7C5CFF&hide_border=true&custom_title=Contribution%20activity" alt="Contribution activity" width="100%">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=blizzardpy&theme=github_dark" alt="Languages by repo" height="200">
+<img src="https://streak-stats.demolab.com?user=blizzardpy&background=080A14&border=1E2540&stroke=1E2540&ring=7C5CFF&fire=F472B6&currStreakLabel=22D3EE&sideLabels=8293B5&dates=5A6785&currStreakNum=F2F5FF&sideNums=F2F5FF" alt="Contribution streak" height="200">
 
 </div>
 

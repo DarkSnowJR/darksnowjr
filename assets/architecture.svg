@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" role="img" aria-label="Request path: clients to REST APIs to domain services to PostgreSQL. Async path: Redis and Celery queues to workers to LLM and RAG to pgvector and Pinecone.">
+  <title>The system shape I build</title>
+
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <linearGradient id="edge2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#F472B6"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <marker id="tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8B7FE8"/>
+    </marker>
+    <clipPath id="frame"><rect width="1200" height="430" rx="22"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="430" fill="#080A14"/>
+    <g filter="url(#glow)" opacity="0.4">
+      <ellipse cx="260" cy="120" rx="230" ry="110" fill="#7C5CFF"/>
+      <ellipse cx="900" cy="330" rx="250" ry="120" fill="#22D3EE"/>
+    </g>
+    <rect width="1200" height="430" fill="#080A14" opacity="0.55"/>
+
+    <!-- lane A: request path -->
+    <text x="40" y="52" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12"
+          letter-spacing="1.6" fill="#22D3EE">REQUEST PATH</text>
+
+    <g font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">
+      <g>
+        <rect x="40" y="72" width="250" height="66" rx="13" fill="#111829" stroke="#2A3352"/>
+        <text x="165" y="100" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">Clients</text>
+        <text x="165" y="120" text-anchor="middle" font-size="12.5" fill="#8293B5">web · mobile · partners</text>
+      </g>
+      <g>
+        <rect x="330" y="72" width="250" height="66" rx="13" fill="#111829" stroke="#2A3352"/>
+        <text x="455" y="100" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">REST APIs</text>
+        <text x="455" y="120" text-anchor="middle" font-size="12.5" fill="#8293B5">Django/DRF · FastAPI · Gin</text>
+      </g>
+      <g>
+        <rect x="620" y="72" width="250" height="66" rx="13" fill="#141C33" stroke="#7C5CFF" stroke-opacity="0.55"/>
+        <text x="745" y="100" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">Domain services</text>
+        <text x="745" y="120" text-anchor="middle" font-size="12.5" fill="#8293B5">Odoo ERP · booking · media</text>
+      </g>
+      <g>
+        <rect x="910" y="72" width="250" height="66" rx="13" fill="#111829" stroke="#2A3352"/>
+        <text x="1035" y="100" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">PostgreSQL</text>
+        <text x="1035" y="120" text-anchor="middle" font-size="12.5" fill="#8293B5">the system of record</text>
+      </g>
+
+      <!-- lane B: async path -->
+      <text x="40" y="238" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12"
+            letter-spacing="1.6" fill="#F472B6">ASYNC · EVENT-DRIVEN</text>
+
+      <g>
+        <rect x="40" y="258" width="250" height="66" rx="13" fill="#111829" stroke="#2A3352"/>
+        <text x="165" y="286" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">Redis · Celery</text>
+        <text x="165" y="306" text-anchor="middle" font-size="12.5" fill="#8293B5">queues · retries · schedules</text>
+      </g>
+      <g>
+        <rect x="330" y="258" width="250" height="66" rx="13" fill="#111829" stroke="#2A3352"/>
+        <text x="455" y="286" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">Workers</text>
+        <text x="455" y="306" text-anchor="middle" font-size="12.5" fill="#8293B5">FFmpeg · transcode · notify</text>
+      </g>
+      <g>
+        <rect x="620" y="258" width="250" height="66" rx="13" fill="#141C33" stroke="#22D3EE" stroke-opacity="0.5"/>
+        <text x="745" y="286" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">LLM + RAG</text>
+        <text x="745" y="306" text-anchor="middle" font-size="12.5" fill="#8293B5">summarize · Q&amp;A · captions</text>
+      </g>
+      <g>
+        <rect x="910" y="258" width="250" height="66" rx="13" fill="#111829" stroke="#2A3352"/>
+        <text x="1035" y="286" text-anchor="middle" font-size="16" font-weight="600" fill="#F2F5FF">pgvector · Pinecone</text>
+        <text x="1035" y="306" text-anchor="middle" font-size="12.5" fill="#8293B5">embeddings</text>
+      </g>
+    </g>
+
+    <!-- edges -->
+    <g fill="none" stroke-width="1.6" marker-end="url(#tip)">
+      <path d="M290 105 H326" stroke="url(#edge)"/>
+      <path d="M580 105 H616" stroke="url(#edge)"/>
+      <path d="M870 105 H906" stroke="url(#edge)"/>
+      <path d="M290 291 H326" stroke="url(#edge2)"/>
+      <path d="M580 291 H616" stroke="url(#edge2)"/>
+      <path d="M870 291 H906" stroke="url(#edge2)"/>
+      <!-- services enqueue work, workers persist back -->
+      <path d="M700 142 C700 190 220 180 165 252" stroke="#7C5CFF" stroke-opacity="0.75"/>
+      <path d="M520 254 C560 200 980 210 1010 142" stroke="#22D3EE" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+    </g>
+
+    <!-- a request travelling the happy path -->
+    <circle r="3.5" fill="#22D3EE">
+      <animateMotion dur="6s" repeatCount="indefinite"
+                     path="M40 105 H290 M330 105 H580 M620 105 H870 M910 105 H1160"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" letter-spacing="0.8">
+      <rect x="384" y="180" width="66" height="17" rx="4" fill="#080A14"/>
+      <text x="390" y="193" fill="#7C5CFF">enqueue</text>
+      <rect x="730" y="184" width="58" height="17" rx="4" fill="#080A14"/>
+      <text x="736" y="197" fill="#5D7FA8">persist</text>
+    </g>
+
+    <rect x="40" y="366" width="1120" height="1.2" fill="#2A3352"/>
+    <text x="40" y="398" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5"
+          fill="#8293B5">RFC before code · staging mirrors prod · CI/CD · metrics + alerting after every launch</text>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="429" rx="22" fill="none" stroke="#8FA0C8" stroke-opacity="0.16"/>
+</svg>
